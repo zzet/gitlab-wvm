@@ -13,3 +13,7 @@ $ ansible-galaxy install zzet.gitlab --roles-path='./provisioning/roles'
 $ vagrant up
 ```
 6. Uncomment and edit path to source code
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/zzet/gitlab-wvm/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

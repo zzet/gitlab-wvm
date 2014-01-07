@@ -4,7 +4,7 @@
 
 ``` bash
 $ cd gitlab-wvm
-$ ansible-galaxy install zzet.gitlab --roles-path='./provisioning/roles'
+$ prepare.sh
 $ vagrant up
 ```
 

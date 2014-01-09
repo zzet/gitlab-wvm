@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |v, override|
     v.customize ["modifyvm", :id, "--memory", MEMORY.to_i]
     v.customize ["modifyvm", :id, "--cpus", CORES.to_i]
-    v.gui = true
+    #v.gui = true
   end
 
   config.vm.provision "ansible" do |ansible|
@@ -35,8 +35,8 @@ Vagrant.configure("2") do |config|
   host_group_id = 1000
 
   if RUBY_PLATFORM =~ /linux|darwin/
-    #config.vm.synced_folder("~/projects/infrastructure/gitlab",       "/rest/u/facsite/apps/gitlab/current",       nfs: true)
-    #config.vm.synced_folder("~/projects/infrastructure/gitlab-shell", "/rest/u/facsite/apps/gitlab-shell/current", nfs: true)
+    config.vm.synced_folder("/Users/zzet/projects/infrastructure/gitlabhq",     "/rest/u/apps/gitlab/current",       :nfs => true)
+    config.vm.synced_folder("/Users/zzet/projects/infrastructure/gitlab-shell", "/rest/u/apps/gitlab-shell/current", :nfs => true)
     host_user_id = Process.euid
     host_group_id = Process.egid
   end

@@ -5,8 +5,14 @@ gitlab_env:         development
 rbenv:
   env: user
   version: v0.4.0
-  ruby_version: 2.0.0-p247
+  ruby_version: 2.0.0-p481
 
 users:
   - { name: git,     home: /var/git,       groups: 'git,gitlab', comment: "Gitlab git and run user" }
   - { name: gitlab,  home: /home/gitlab,   groups: 'git,gitlab', comment: "Gitlab deploy user" }
+
+rbenv_users:
+  - { name: git,     home: /var/git,       groups: 'git,gitlab', comment: "Gitlab git and run user" }
+  - { name: gitlab,  home: /home/gitlab,   groups: 'git,gitlab', comment: "Gitlab deploy user" }
+
+elasticsearch_timezone: "UTC"

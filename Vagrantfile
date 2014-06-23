@@ -35,8 +35,8 @@ Vagrant.configure("2") do |config|
   host_group_id = 1000
 
   if RUBY_PLATFORM =~ /linux|darwin/
-    config.vm.synced_folder("/Users/zzet/projects/infrastructure/gitlabhq",     "/rest/u/apps/gitlab/current",       :nfs => true)
-    config.vm.synced_folder("/Users/zzet/projects/infrastructure/gitlab-shell", "/rest/u/apps/gitlab-shell/current", :nfs => true)
+    config.vm.synced_folder("/Users/zzet/projects/gl",  "/rest/u/apps/gitlab/current",       :nfs => true)
+    config.vm.synced_folder("/Users/zzet/projects/gls", "/rest/u/apps/gitlab-shell/current", :nfs => true)
     host_user_id = Process.euid
     host_group_id = Process.egid
   end

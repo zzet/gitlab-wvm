@@ -3,6 +3,7 @@ mkdir -p ./provisioning/roles
 echo "get roles"
 ansible-galaxy install bennojoy.nginx --roles-path='./provisioning/roles'
 ansible-galaxy install bennojoy.redis --roles-path='./provisioning/roles'
+ansible-galaxy install kunik.elasticsearch --roles-path='./provisioning/roles'
 ansible-galaxy install zzet.common --roles-path='./provisioning/roles'
 ansible-galaxy install zzet.rbenv --roles-path='./provisioning/roles'
 ansible-galaxy install zzet.postgresql --roles-path='./provisioning/roles'

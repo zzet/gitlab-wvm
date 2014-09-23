@@ -1,3 +1,7 @@
+# REPOSITORY MOVED
+
+Repository moved to https://github.com/Undev/gitlab-wvm
+
 - Install ansible (with galaxy) on host machine
 - Clone repo
 - DOIT:
